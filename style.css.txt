@@ -1,0 +1,82 @@
+:root {
+  --bg-light: #f2f2f2;
+  --bg-dark: #121212;
+  --text-light: #ffffff;
+  --text-dark: #121212;
+  --primary: #e50914;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  transition: 0.3s ease;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.buttons a:hover {
+  background-color: #b00610;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+body.light .buttons a {
+  background-color: #007bff;
+}
+
+body.light .buttons a:hover {
+  background-color: #0056b3;
+}
+
+body.light .theme-toggle {
+  border-color: #121212;
+  color: #121212;
+}
